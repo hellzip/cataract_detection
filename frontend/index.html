@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cataract Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo website.png" alt="Eyetech Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <section class="intro">
+            <h1>Cataract Detection</h1>
+            <p>Early Cataract Detection for Clearer, Healthier Vision</p>
+        </section>
+        <section class="upload-photo">
+            <div class="photo-container">
+                <button id="upload-btn">Add Photo</button>
+                <input type="file" id="photo-input" accept="image/*" hidden>
+            </div>
+            <div id="adjust-photo" class="hidden">
+                <h2>Adjust Your Photo</h2>
+                <div class="photo-preview">
+                    <img id="uploaded-image" src="" alt="Uploaded Eye">
+                    <div class="focus-circle"></div>
+                </div>
+                <!-- Tombol detect sekarang di bawah gambar -->
+                <button id="detect-btn">Detect</button>
+            </div>
+            <div class="instructions">
+                <h2>How to Get Started with Cataract Detection</h2>
+                <ol>
+                    <li><strong>Capture an Eye Photo:</strong> Point your device's camera at your eye, ensuring the pupil area is clearly visible. Follow the on-screen guide for optimal results.</li>
+                    <li><strong>Adjust the Photo:</strong> Align and focus the detection circle on the pupil area.</li>
+                    <li><strong>Click "Detect":</strong> The app will process the image and provide the detection results.</li>
+                    <li><strong>View Detection Results:</strong> The results will include preliminary information about your eye condition.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    <div id="detection-result" class="hidden">
+        <div id="result-potential-cataract" class="hidden">
+            <h2>Potential Cataract</h2>
+            <div class="warning">⚠️</div>
+            <div class="info-box">
+                <p>👤 Our analysis suggests potential signs of cataract in your eye. This is not a definitive diagnosis.</p>
+            </div>
+            <div class="info-box">
+                <p>👤 Cataract is a common condition that can affect vision. Early detection and treatment can significantly improve outcomes.</p>
+            </div>
+            <div class="info-box">
+                <p>👤 We recommend consulting an eye care professional for a detailed examination.</p>
+            </div>
+            <button class="learn-more">Learn More About Cataracts</button>
+        </div>
+        <div id="result-normal" class="hidden">
+            <h2>Normal</h2>
+            <div class="success">✔️</div>
+            <div class="info-box">
+                <p>No Issues Detected</p>
+            </div>
+        </div>
+    </div>
+    <!-- Hidden reference images -->
+    <img id="normal-eye-ref" src="normal_eye.png" alt="Normal Eye" hidden>
+    <img id="cataract-eye-ref" src="cataract_eye.png" alt="Cataract Eye" hidden>
+</body>
+<script src="script.js"></script>
+</html>
